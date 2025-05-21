@@ -1,62 +1,48 @@
 mod frames;
-mod tests;
 mod image_functions;
+mod tests;
 
-use crate::frames::all_frames;
-use crate::image_functions::overlay_image;
-use crate::image_functions::overlay_image_rounded;
-use image::{ImageBuffer, Rgba, RgbaImage};
+use clap::{Parser, Subcommand};
+use std::path::PathBuf;
 
-pub fn frame(screen_shot_path: &str, variant: Option<&str>, output_path: &str) {
-    let screen_shot = image::open(screen_shot_path)
-        .expect("Failed to open background image")
-        .to_rgba8();
+use crate::frames::{all_frames, frame};
 
-    // this will filter based on variant
-    let frames = all_frames();
-    let device = frames
-        .iter()
-        .filter(|frame| frame.dimensions == screen_shot.dimensions())
-        .filter(|frame| if variant.is_some() { frame.variant == variant.unwrap() } else { true })
-        .next()
-        .expect("Failed to find device");
+#[derive(Parser, Debug)]
+#[command(version, about, long_about = None)]
+struct Args {
+    #[command(subcommand)]
+    command: Option<Commands>,
+}
 
-    let device_frame = image::open(device.path)
-        .expect("Failed to open overlay image")
-        .to_rgba8();
+#[derive(Subcommand, Debug)]
+enum Commands {
+    Frame {
+        input: PathBuf,
 
-    // draw a canvas the size of the frame
-    let mut canvas: RgbaImage = ImageBuffer::from_pixel(
-        device_frame.width(),
-        device_frame.height(),
-        Rgba([0, 0, 0, 0]),
-    );
+        output: Option<PathBuf>,
 
-    let offset_x = (device_frame.width() - screen_shot.width()) / 2;
-    let offset_y = (device_frame.height() - screen_shot.height()) / 2;
-
-    // Composite: paste the overlay onto the background
-    overlay_image_rounded(
-        &mut canvas,
-        &screen_shot,
-        offset_x,
-        offset_y,
-        device.corner_radius,
-    );
-    overlay_image(&mut canvas, &device_frame, 0, 0);
-
-    // Save the result
-    canvas
-        .save(output_path)
-        .expect("Failed to save output image");
-
-    println!("Image saved to {}", output_path);
+        #[arg(short, long)]
+        variant: Option<String>,
+    },
+    Info {},
 }
 
 fn main() {
+    let args = Args::parse();
+
+    match &args.command {
+        Some(Commands::Frame {
+            input,
+            output,
+            variant,
+        }) => {
+            frame(input.clone(), variant.clone(), output.clone().unwrap_or(PathBuf::from("output.png")));
+        }
+        Some(Commands::Info {}) => {
+            all_frames().iter().for_each(|frame| println!("{} - {} - ({}x{})", frame.device, frame.variant, frame.dimensions.0, frame.dimensions.0));
+        }
+        None => {}
+    }
 
     // frame --variant = "Black Titanium" --output target/iPhone 16 Pro Max - Portrait.png
-
-
-    
 }
