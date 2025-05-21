@@ -1,4 +1,3 @@
-use std::collections::HashMap;
 use std::path::PathBuf;
 use image::{ImageBuffer, Rgba, RgbaImage};
 use crate::image_functions::{overlay_image, overlay_image_rounded};
@@ -119,7 +118,7 @@ pub fn all_frames() -> Vec<Frame> {
             variant: "White Titanium",
             dimensions: (1320, 2868),
             corner_radius: 100,
-            path: "frames/iPhone 16 Pro Max/iPhone 16 Pro Max - White Titanium - Portrait.png",
+            path: "frames/iPhone 16 Pro Max/iPhone 6.9 - Placeholder.png",
         },
 
 

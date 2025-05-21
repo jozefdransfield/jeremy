@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="root" xmlns="http://www.w3.org/2000/svg" version="1.1"
+     viewBox="0 0 1290 2796">
+    <defs>
+        <style>
+            .gradient {
+                fill: url(#radial-gradient);
+            }
+        </style>
+        <radialGradient id="radial-gradient" cx="645" cy="1398" fx="645" fy="1398" r="1088.7"
+                        gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#70b62c"/>
+            <stop offset="1" stop-color="#173e1e"/>
+        </radialGradient>
+    </defs>
+    <rect class="gradient" width="1290" height="2796"/>
+    <text x="50%" y="200" font-family="Arial" font-size="80" fill="white" text-anchor="middle">
+        <tspan x="650" dy="0">Lorem ipsum dolor sit amet,</tspan>
+        <tspan x="650" dy="1.5em">consectetur adipiscing elit.</tspan>
+        <tspan font-size="90" x="650" dy="2em">Mauris gravida lacinia.</tspan>
+    </text>
+    <image id="jeremy-screenshot" transform="translate(50, 600) scale(.8)" href="iPhone 6.9 - Placeholder.png"/>
+</svg>

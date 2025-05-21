@@ -52,7 +52,7 @@ mod tests {
         frame(
             PathBuf::from("screenshots/iPhone 16 Pro Max - Portrait.png"),
             Some(String::from("White Titanium")),
-            PathBuf::from("target/iPhone 16 Pro Max - White Titanium - Portrait.png"),
+            PathBuf::from("target/iPhone 6.9 - Placeholder.png"),
         );
         frame(
             PathBuf::from("screenshots/iPhone 16 Pro Max - Landscape.png"),
@@ -110,7 +110,7 @@ mod tests {
         frame(
             PathBuf::from("screenshots/iPhone 16 Pro Max - Portrait.png"),
             Some(String::from("White Titanium")),
-            PathBuf::from("target/iPhone 16 Pro Max - White Titanium - Portrait.png"),
+            PathBuf::from("target/iPhone 6.9 - Placeholder.png"),
         );
         frame(
             PathBuf::from("screenshots/iPhone 16 Pro Max - Landscape.png"),
