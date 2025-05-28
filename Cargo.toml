@@ -1,6 +1,6 @@
 [package]
 name = "jeremy"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 repository = "https://github.com/jozefdransfield/jeremy"
 description = "Jeremy is a tool to frame iOS screenshots with the device bezel"
