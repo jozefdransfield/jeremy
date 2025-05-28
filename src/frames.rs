@@ -118,7 +118,7 @@ pub fn all_frames() -> Vec<Frame> {
             variant: "White Titanium",
             dimensions: (1320, 2868),
             corner_radius: 100,
-            path: "frames/iPhone 16 Pro Max/iPhone 6.9 - Placeholder.png",
+            path: "frames/iPhone 16 Pro Max/iPhone 16 Pro Max - White Titanium - Portrait.png",
         },
 
 
@@ -180,7 +180,7 @@ pub fn all_frames() -> Vec<Frame> {
             variant: "White Titanium",
             dimensions: (1206, 2622),
             corner_radius: 100,
-            path: "frames/iPhone 16 Pro Max/iPhone 16 Pro - White Titanium - Portrait.png",
+            path: "frames/iPhone 16 Pro/iPhone 16 Pro - White Titanium - Portrait.png",
         },
 
 
