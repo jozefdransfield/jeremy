@@ -2,6 +2,7 @@
 name = "jeremy"
 version = "0.1.0"
 edition = "2024"
+repository = "https://github.com/jozefdransfield/jeremy"
 
 [dependencies]
 clap = { version = "4.5.38", features = ["derive"] }
