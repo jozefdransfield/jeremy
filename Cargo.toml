@@ -1,6 +1,6 @@
 [package]
 name = "jeremy"
-version = "0.5.0"
+version = "0.1.1"
 edition = "2024"
 repository = "https://github.com/jozefdransfield/jeremy"
 description = "Jeremy is a tool to frame iOS screenshots with the device bezel"
@@ -10,6 +10,7 @@ license = "MIT"
 clap = { version = "4.5.38", features = ["derive"] }
 image = "0.25.6"
 resvg = "0.45.1"
+
 
 # The profile that 'dist' will build with
 [profile.dist]
