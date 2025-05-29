@@ -1,7 +1,7 @@
 use std::path::PathBuf;
 use resvg::{tiny_skia, usvg};
 
-pub fn render(template: PathBuf, screenshot: PathBuf, output: PathBuf) {
+pub fn render(template: PathBuf, _screenshot: PathBuf, output: PathBuf) {
     // load the template in xml,
 
     // replace screenshot with base64 encoded image

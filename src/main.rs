@@ -32,7 +32,6 @@ enum Commands {
     },
     Info {},
 }
-
 fn main() {
     let args = Args::parse();
 

@@ -1,6 +1,6 @@
 [package]
 name = "jeremy"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2024"
 repository = "https://github.com/jozefdransfield/jeremy"
 description = "Jeremy is a tool to frame iOS screenshots with the device bezel"
@@ -10,6 +10,8 @@ license = "MIT"
 clap = { version = "4.5.38", features = ["derive"] }
 image = "0.25.6"
 resvg = "0.45.1"
+rust-embed = "8.7.2"
+
 
 
 # The profile that 'dist' will build with
