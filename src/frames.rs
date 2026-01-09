@@ -340,5 +340,34 @@ pub fn all_frames() -> Vec<Frame> {
             corner_radius: 100,
             path: "iPhone 16/iPhone 16 - White - Portrait.png",
         },
+
+        Frame {
+            device: "iPad Pro 13 - M4",
+            variant: "Silver",
+            dimensions: (2752, 2064),
+            corner_radius: 100,
+            path: "iPad Pro 13 - M4/iPad Pro 13 - M4 - Silver - Landscape.png",
+        },
+        Frame {
+            device: "iPad Pro 13 - M4",
+            variant: "Silver",
+            dimensions: (2064, 2752),
+            corner_radius: 100,
+            path: "iPad Pro 13 - M4/iPad Pro 13 - M4 - Silver - Portrait.png",
+        },
+        Frame {
+            device: "iPad Pro 13 - M4",
+            variant: "Space Gray",
+            dimensions: (2752, 2064),
+            corner_radius: 50,
+            path: "iPad Pro 13 - M4/iPad Pro 13 - M4 - Space Gray - Landscape.png",
+        },
+        Frame {
+            device: "iPad Pro 13 - M4",
+            variant: "Space Gray",
+            dimensions: (2064, 2752),
+            corner_radius: 50,
+            path: "iPad Pro 13 - M4/iPad Pro 13 - M4 - Space Gray - Portrait.png",
+        }
     ]
 }
