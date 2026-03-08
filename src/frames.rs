@@ -69,6 +69,57 @@ pub fn frame(screen_shot_path: PathBuf, variant: Option<String>, output_path: Pa
 
 pub fn all_frames() -> Vec<Frame> {
     vec![
+
+        Frame {
+            device: "iPhone 17 Pro Max",
+            variant: "Cosmic Orange",
+            dimensions: (1320, 2868),
+            path: "iPhone 17 Pro Max/iPhone 17 Pro Max - Cosmic Orange - Portrait.png",
+            corner_radius: 100,
+        },
+
+        Frame {
+            device: "iPhone 17 Pro Max",
+            variant: "Cosmic Orange",
+            dimensions: (2868, 1320),
+            path: "iPhone 17 Pro Max/iPhone 17 Pro Max - Cosmic Orange - Landscape.png",
+            corner_radius: 100,
+        },
+
+        Frame {
+            device: "iPhone 17 Pro Max",
+            variant: "Deep Blue",
+            dimensions: (1320, 2868),
+            path: "iPhone 17 Pro Max/iPhone 17 Pro Max - Deep Blue - Portrait.png",
+            corner_radius: 100,
+        },
+
+        Frame {
+            device: "iPhone 17 Pro Max",
+            variant: "Deep Blue",
+            dimensions: (2868, 1320),
+            path: "iPhone 17 Pro Max/iPhone 17 Pro Max - Deep Blue - Landscape.png",
+            corner_radius: 100,
+        },
+
+        Frame {
+            device: "iPhone 17 Pro Max",
+            variant: "Silver",
+            dimensions: (1320, 2868),
+            path: "iPhone 17 Pro Max/iPhone 17 Pro Max - Silver - Portrait.png",
+            corner_radius: 100,
+        },
+
+        Frame {
+            device: "iPhone 17 Pro Max",
+            variant: "Silver",
+            dimensions: (2868, 1320),
+            path: "iPhone 17 Pro Max/iPhone 17 Pro Max - Silver - Landscape.png",
+            corner_radius: 100,
+        },
+
+
+
         Frame {
             device: "iPhone 16 Pro Max",
             variant: "Black Titanium",
@@ -187,12 +238,6 @@ pub fn all_frames() -> Vec<Frame> {
             corner_radius: 100,
             path: "iPhone 16 Pro/iPhone 16 Pro - White Titanium - Portrait.png",
         },
-
-
-
-
-
-
 
         Frame {
             device: "iPhone 16 Plus",
